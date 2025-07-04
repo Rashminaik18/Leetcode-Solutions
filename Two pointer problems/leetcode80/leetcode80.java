@@ -6,6 +6,8 @@
  *          if yes-> then i++ only because k acts as the marker to signify where the next Different element must be placed
  *          if no-> then k++,because the element in the current and k-2th position are different,signifying that its not the third        duplicate of the nums[k]
  * It is important to note that i==k as along as the first element with 3 duplicates are encountered. Once this condition is encountered where there are 3 duplicates of a paricular element then k!=i as k starts acting as the pointer to point to the position where the next different element must be placed
+ * Time Complexity: O(n)-> a single loop iterates through all the elements
+ * Space Comeplexity:O(1)-> No extra space used
  */
 
 import java.util.Scanner;
