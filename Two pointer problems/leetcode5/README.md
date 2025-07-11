@@ -1,6 +1,6 @@
-#LEETCODE 5: lONGEST PALINDROMIC SUBSTRING
+<h1>LEETCODE 5: lONGEST PALINDROMIC SUBSTRING</h1>
 
-##Brute Force Approach
+<h2>Brute Force Approach</h2>
 
 - We input string from the user
 - we call the LongPalindromeSubstring(): This function is used to find out the longest panlindromic substring and return it
