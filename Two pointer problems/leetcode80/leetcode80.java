@@ -34,7 +34,7 @@ public class leetcode80
          {
             System.out.print(obj.nums[i]+" ");
          }
-
+       
     }
 
     public int removeDuplicates()
