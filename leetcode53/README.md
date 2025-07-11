@@ -1,6 +1,6 @@
-#Leetcode 53: Maximum Subarray
+<h1>Leetcode 53: Maximum Subarray</h1>
 <br>
-##Brute force
+<h2>Brute force</h2>
     - The elements of the array are input from the user.
     - `maxSubarray()` is called and two parameters are passed to it:
     - the array `arr`
