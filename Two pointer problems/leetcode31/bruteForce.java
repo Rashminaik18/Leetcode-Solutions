@@ -6,6 +6,7 @@ public class bruteForce
     {
         int n;
         int[] arr;
+       
         Scanner sc=new Scanner(System.in);
         bruteForce obj=new bruteForce();
         while(true)
@@ -19,12 +20,66 @@ public class bruteForce
             {
                 arr[i]=sc.nextInt();   
             }
-            List<List<Integer>> permutations=obj.GeneratePermutations(arr);
+        
+            List<List<Integer>> perms=obj.GeneratePermutations(arr);
+           for(int i=0;i<perms.size()-1;i++)
+           {
+            for(int j=i+1;j<perms.size();j++)
+            {
+                if(obj.compareList(perms.get(i),perms.get(j))>0)
+                {
+                    List<Integer> temp=perms.get(i);
+                    perms.set(i,perms.get(j));
+                    perms.set(j,temp);  
+                
+                }
+
+            }
+           }
+
+           List<Integer> tofind=new ArrayList<>();
+           
+           for(int i=0;i<n;i++)
+           {
+             tofind.add(arr[i]);
+           }
+
+            if(tofind.equals(perms.get(perms.size()-1)))
+                 System.out.println(perms.get(0));
+            else
+            {
+           for( int i=0;i<perms.size();i++)
+           {
+        
+            if(perms.get(i).equals(tofind))
+            System.out.println(perms.get(i+1));
+           }
+        }
+
+
+
             
         }
     }
 
-    public List<List<Integer>> GeneratePermutations(int[] arr)
+
+
+
+    public int compareList(List<Integer> a,List<Integer> b)
+    {
+        int x=0;
+        for( int i=0;i<a.size();i++)
+        {
+             x=a.get(i)-b.get(i);
+             if(x!=0)
+             return x;
+
+        }
+        return 0;
+    }
+
+
+        public List<List<Integer>> GeneratePermutations(int[] arr)
     {
         List<List<Integer>> result=new ArrayList<>();
         backtrack(arr,0,result);
