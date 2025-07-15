@@ -43,3 +43,5 @@ Kadanes Algorithm works on the following logic:
     The moment we encounter a number <0 we reset the curSum because adding a negative number can only make the sum smaller
 
 </ul>
+<b>Time Complexity:O(n)</b><br>
+<b>Space Complexity:O(1)</b><br>
