@@ -10,3 +10,7 @@
 
 TIME COMPLEXITY:<strong>O(n)</strong><br>
 SPACE COMPLEXITY:<Strong>O(1)</strong>
+
+--------------------------------------
+## OPTIMAL APPROACH
+- 
