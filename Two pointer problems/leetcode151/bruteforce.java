@@ -1,9 +1,9 @@
 import java.util.Scanner;
-public class bruteforce
+public class bruteForce
 {
     public static void main(String[] args)
     {
-        bruteforce obj=new bruteforce();
+        bruteForce obj=new bruteForce();
         while (true) 
         {
         Scanner sc=new Scanner(System.in);
@@ -27,14 +27,17 @@ public class bruteforce
             {
                 if(s.charAt(i)==' ')
                 {
-                    if(i==0||i==s.length()-1)
-                    i++;
-                    else
+                  
+                    if(!word.equals(""))
                     {
+                        
                         res=word+" "+res;
+                        
                         i++;
                         word="";
                     }
+                    else
+                    i++;
                 }
                 else
                 {
